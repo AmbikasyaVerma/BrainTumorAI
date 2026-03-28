@@ -1,0 +1,45 @@
+{
+  "classes": [
+    "glioma",
+    "meningioma",
+    "notumor",
+    "pituitary"
+  ],
+  "evaluation": {
+    "subset": "first_n_per_class_from_testing",
+    "n_per_class": 80,
+    "total_samples": 320,
+    "counts_per_class": [
+      80,
+      80,
+      80,
+      80
+    ]
+  },
+  "matrix": [
+    [
+      66,
+      7,
+      2,
+      5
+    ],
+    [
+      8,
+      65,
+      0,
+      7
+    ],
+    [
+      0,
+      0,
+      80,
+      0
+    ],
+    [
+      2,
+      2,
+      0,
+      76
+    ]
+  ]
+}

@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+.Python
+.pytest_cache/
+.mypy_cache/
+
+# Virtual environments
+venv/
+.venv/
+BrainTumorAI/backend/venv/
+BrainTumorAI/backend/dataset/venv/
+
+# Backend runtime artifacts
+BrainTumorAI/backend/logs/tensorboard/
+BrainTumorAI/backend/predictions.db
+
+# Training data and model binaries
+BrainTumorAI/backend/dataset/
+BrainTumorAI/backend/model/*.h5
+BrainTumorAI/backend/model/*.weights.h5
+
+# Frontend dependencies and build output
+frontend/node_modules/
+frontend/build/
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# OS/editor files
+.DS_Store
+Thumbs.db
