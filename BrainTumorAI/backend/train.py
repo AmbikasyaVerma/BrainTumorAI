@@ -11,7 +11,7 @@ from tensorflow.keras.preprocessing.image import ImageDataGenerator
 # ---------------- CONFIG ----------------
 IMG_SIZE = 224
 BATCH_SIZE = 32
-EPOCHS = 10
+EPOCHS = 20
 TRAIN_SPLIT = 0.8
 RANDOM_SEED = 42
 EVAL_SAMPLES_PER_CLASS = 80
