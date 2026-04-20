@@ -2,6 +2,7 @@
 import os
 import random
 import shutil
+from datetime import datetime
 import numpy as np
 from tensorflow.keras import layers, models, optimizers, callbacks
 from tensorflow.keras.applications import VGG16
@@ -11,7 +12,7 @@ from tensorflow.keras.preprocessing.image import ImageDataGenerator
 # ---------------- CONFIG ----------------
 IMG_SIZE = 224
 BATCH_SIZE = 32
-EPOCHS = 20
+EPOCHS = 10
 TRAIN_SPLIT = 0.8
 RANDOM_SEED = 42
 EVAL_SAMPLES_PER_CLASS = 80
@@ -335,7 +336,8 @@ model.compile(
 # ---------------- TRAIN ----------------
 class_weights = compute_class_weights_from_labels(train_data.classes, num_classes)
 os.makedirs(LOGS_DIR, exist_ok=True)
-tensorboard_log_dir = os.path.join(LOGS_DIR, "tensorboard")
+run_id = datetime.now().strftime("%Y%m%d-%H%M%S")
+tensorboard_log_dir = os.path.join(LOGS_DIR, "tensorboard", run_id)
 
 train_callbacks = [
     callbacks.EarlyStopping(monitor="val_accuracy", patience=4, restore_best_weights=True),

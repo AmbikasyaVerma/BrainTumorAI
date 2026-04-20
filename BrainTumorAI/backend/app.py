@@ -171,7 +171,7 @@ async def model_evaluation():
     return {
         "confusion_matrix": confusion_payload,
         "metrics": metrics_payload
-    }
+    }4
 
 
 # =============================
